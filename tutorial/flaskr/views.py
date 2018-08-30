@@ -26,7 +26,7 @@ def load_user():
 @app.route('/')
 def show_entries():
     entries = Entry.query.order_by(Entry.id.desc()).all()
-    return render_template('show_entries.html',entries=entries)
+    return render_template('calculator.html',entries=entries)
 
 @app.route('/add',methods=['POST'])
 def add_entry():
